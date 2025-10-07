@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valley Water Solutions | Central Valley Water Management Experts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #1a3d4f;
+      background-color: #f5f8fa;
+      overflow-x: hidden;
+    }
+
+    header.hero, header.page-header {
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    header .overlay {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+      animation: fadeIn 2s ease-in-out;
+      color: #094c60;
+      font-weight: 700;
+    }
+
+    header img {
+      max-width: 140px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    nav {
+      background: #094c60;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      display: block;
+    }
+
+    nav a:hover {
+      background: #0e7490;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: #094c60;
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    section, main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    h1, h2, h3 {
+      color: #0e7490;
+    }
+
+    .feature-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      background: white;
+      margin: 1rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 5px solid #0e7490;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .about {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .about-container {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .about-text-first-paragraph {
+        margin-top: 0;
+    }
+
+    footer {
+      background: #094c60;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background: #0e7490;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #0c5c72;
+    }
+
+    @media (max-width: 768px) {
+      header.hero, header.page-header {
+        background-attachment: scroll;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      nav a {
+        padding: 1rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" style="background-image: url('images/irrigation-canal.jpg');">
+    <div class="overlay">
+      <img src="VWS Logo.png" alt="Valley Water Solutions Logo" />
+      <h1>Valley Water Solutions</h1>
+      <p>Expert Water Management & Sustainability Consulting for California’s Central Valley</p>
+    </div>
+  </header>
+
+  <nav>
+    <button class="menu-toggle">☰ Menu</button>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="intro fade-in">
+      <h2>Our Mission</h2>
+      <p><em>“Providing expert water management and sustainability solutions to support communities, agriculture, and the environment in California’s Central Valley.”</em></p>
+      <!-- <img src="images/irrigation-canal.jpg" alt="Irrigation canal in the Central Valley" class="feature-img fade-in" /> -->
+    </section>
+
+    <section id="services" class="services fade-in">
+      <h2>Core Services</h2>
+      <ul>
+        <li>Groundwater and surface water management</li>
+        <li>Sustainable Groundwater Management Act (SGMA) compliance and planning</li>
+        <li>Water supply planning, transfers, and exchanges</li>
+        <li>Flood-MAR strategy and implementation</li>
+        <li>Policy and stakeholder negotiation</li>
+        <li>Water infrastructure design and construction</li>
+      </ul>
+      <img src="images/floods.jpg" alt="Flood-MAR recharge fields" class="feature-img fade-in" />
+    </section>
+
+    <section id="about" class="about fade-in">
+    
+      <h2>About the Principal Engineer</h2>
+      <h3>Hicham Eltal</h3>
+      <div class="about-container">
+        <div class="about-img-container">
+            <img src="images/hicham-eltal.png" alt="Hicham Eltal, Principal Engineer" class="about-img fade-in" />
+          </div>
+          <div class="about-text-container">
+           
+            <p class="about-text-first-paragraph">With over 30 years of experience in water resources, Mr. Eltal is a recognized leader in conjunctive water management, flood operations, and sustainability planning for both agricultural and urban communities.</p>
+            <p>He has served as Plan Manager for the Merced Groundwater Basin (2017–2025), chaired the Merced Irrigation-Urban GSA, and contributed to the Turlock GSP as a Board Member of East Turlock GSA. His leadership has shaped numerous SGMA compliance initiatives, water transfers, flood management programs, and policy negotiations across California’s Central Valley.</p>
+          </div>
+      </div>
+      
+       </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Address:</strong> 3458 Cordova Avenue, Merced, CA 95348</p>
+    <p>&copy; 2025 Valley Water Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+
+      const fadeEls = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      fadeEls.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
