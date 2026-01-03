@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
@@ -7,7 +8,7 @@
   <link rel="shortcut icon" href="/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="VWS" />
-  <link rel="manifest" href="/favicon/site.webmanifest" />  
+  <link rel="manifest" href="/favicon/site.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Valley Water Solutions | Central Valley Water Management Experts</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,7 +21,8 @@
       overflow-x: hidden;
     }
 
-    header.hero, header.page-header {
+    header.hero,
+    header.page-header {
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -45,12 +47,19 @@
     header img {
       max-width: 140px;
       margin-bottom: 1rem;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .fade-in {
@@ -101,13 +110,16 @@
       display: flex;
     }
 
-    section, main {
+    section,
+    main {
       max-width: 900px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       color: #0e7490;
     }
 
@@ -129,7 +141,7 @@
       margin: 1rem 0;
       padding: 1rem 1.5rem;
       border-left: 5px solid #0e7490;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       animation: fadeIn 1.5s ease-in-out;
     }
 
@@ -137,37 +149,37 @@
       background: white;
       padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
-      /* About section styles */
-  .about-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-top: 1.5rem;
-  }
-  
-  .about-img-container {
-    flex: 0 0 auto;
-    text-align: center;
-  }
-  
-  .about-img {
-    max-width: 150px;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .about-text-container {
-    flex: 1;
-  }
-  
-  .about-text-first-paragraph {
-    margin-top: 0;
-  }
+    /* About section styles */
+    .about-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .about-img-container {
+      flex: 0 0 auto;
+      text-align: center;
+    }
+
+    .about-img {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text-container {
+      flex: 1;
+    }
+
+    .about-text-first-paragraph {
+      margin-top: 0;
+    }
 
     footer {
       background: #094c60;
@@ -177,7 +189,8 @@
       margin-top: 4rem;
     }
 
-    .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       margin-bottom: 1rem;
       padding: 0.75rem;
@@ -201,52 +214,61 @@
     }
 
     @media (max-width: 768px) {
-      header.hero, header.page-header {
+
+      header.hero,
+      header.page-header {
         background-attachment: scroll;
       }
+
       .menu-toggle {
         display: block;
       }
+
       .nav-links {
         flex-direction: column;
         width: 100%;
         display: none;
       }
+
       .nav-links.active {
         display: flex;
       }
+
       nav a {
         padding: 1rem;
-        border-top: 1px solid rgba(255,255,255,0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
-      
+
       /* Mobile styles for about container */
       .about-container {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
       }
-      
+
       .about-img-container {
-        order: -1; /* Move image to top on mobile */
+        order: -1;
+        /* Move image to top on mobile */
       }
-      
+
       .about-img {
-        max-width: 150px; /* Larger image on mobile */
+        max-width: 150px;
+        /* Larger image on mobile */
         width: 100%;
         margin: 0 auto;
       }
-      
+
       .about-text-container {
         text-align: center;
       }
-      
+
       .about {
         padding: 1.5rem;
       }
     }
   </style>
 </head>
+
 <body>
   <header class="hero" style="background-image: url('images/hero-image.jpeg');">
     <div class="overlay">
@@ -269,7 +291,8 @@
   <main id="home">
     <section class="intro fade-in">
       <h2>Our Mission</h2>
-      <p><em>“Providing expert water management and sustainability solutions to support communities, agriculture, and the environment in California’s Central Valley.”</em></p>
+      <p><em>“Providing expert water management and sustainability solutions to support communities, agriculture, and
+          the environment in California’s Central Valley.”</em></p>
     </section>
 
     <section id="services" class="services fade-in">
@@ -282,25 +305,30 @@
         <li>Policy and stakeholder negotiation</li>
         <li>Water infrastructure design and construction</li>
       </ul>
-      <img src="images/floods.jpg" alt="Flood-MAR recharge fields" class="feature-img fade-in" />
+      <img src="images/floods.jpg" alt="Flood-MAR Recharge Fields" class="feature-img fade-in" />
     </section>
 
     <section id="about" class="about fade-in">
-    
+
       <h2>About the Principal Engineer</h2>
       <h3>Hicham Eltal</h3>
       <div class="about-container">
         <div class="about-img-container">
-            <img src="images/h-eltal.png" alt="Hicham Eltal, Principal Engineer" class="about-img fade-in" />
-          </div>
-          <div class="about-text-container">
-           
-            <p class="about-text-first-paragraph">With over 30 years of experience in water resources, Mr. Eltal is a recognized leader in conjunctive water management, flood operations, and sustainability planning for both agricultural and urban communities.</p>
-            <p>He has served as Plan Manager for the Merced Groundwater Basin (2017–2025), chaired the Merced Irrigation-Urban GSA, and contributed to the Turlock GSP as a Board Member of East Turlock GSA. His leadership has shaped numerous SGMA compliance initiatives, water transfers, flood management programs, and policy negotiations across California’s Central Valley.</p>
-          </div>
+          <img src="images/h-eltal.png" alt="Hicham Eltal, Principal Engineer" class="about-img fade-in" />
+        </div>
+        <div class="about-text-container">
+
+          <p class="about-text-first-paragraph">With over 30 years of experience in water resources, Mr. Eltal is a
+            recognized leader in conjunctive water management, flood operations, and sustainability planning for both
+            agricultural and urban communities.</p>
+          <p>He has served as Plan Manager for the Merced Groundwater Basin (2017–2025), chaired the Merced
+            Irrigation-Urban GSA, and contributed to the Turlock GSP as a Board Member of East Turlock GSA. His
+            leadership has shaped numerous SGMA compliance initiatives, water transfers, flood management programs, and
+            policy negotiations across California’s Central Valley.</p>
+        </div>
       </div>
-      
-       </section>
+
+    </section>
 
     <section id="contact" class="fade-in">
       <h2>Contact Us</h2>
@@ -341,4 +369,5 @@
     });
   </script>
 </body>
+
 </html>
