@@ -151,6 +151,7 @@ li.active .services-show-more-arrow {
   /* border-left: 5px solid #0e7490; */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   /* animation: fadeIn 1.5s ease-in-out; */
+  border-radius: 4px;
 }
 
 .services-header-container {
