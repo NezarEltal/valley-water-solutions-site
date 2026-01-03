@@ -45,7 +45,10 @@
       <h2>Core Services</h2>
       <ul>
         <li>
-          <h3 class="services-bullet-header">Groundwater and Surface Water Management</h3>
+          <div class="services-header-container">
+            <h3 class="services-bullet-header">Groundwater and Surface Water Management</h3>
+            <img class="services-show-more-arrow" src="/images/arrow-down.svg" />
+          </div>
           <ul class="services-bullet-sub-bullets">
             <li class="services-bullet-sub-bullet">Optimize available water resources driven by timing and
               instantaneous capacity through selective conjunctive use of
@@ -58,8 +61,12 @@
         </li>
 
         <li>
-          <h3 class="services-bullet-header">Sustainable Groundwater Management Act (SGMA) compliance
-            and planning</h3>
+          <div class="services-header-container">
+            <h3 class="services-bullet-header">Sustainable Groundwater Management Act (SGMA) Compliance
+              and Planning</h3>
+            <img class="services-show-more-arrow" src="/images/arrow-down.svg" />
+          </div>
+
           <ul class="services-bullet-sub-bullets">
             <li class="services-bullet-sub-bullet">Provides strategies to implement SGMA for best feasible
               outcomes. Mr. Eltal occupied the Plan Manager of the Merced
@@ -70,7 +77,10 @@
           </ul>
         </li>
         <li>
-          <h3 class="services-bullet-header">Water supply planning, transfers, and exchanges</h3>
+          <div class="services-header-container">
+            <h3 class="services-bullet-header">Water Supply Planning, Transfers, and Exchanges</h3>
+            <img class="services-show-more-arrow" src="/images/arrow-down.svg" />
+          </div>
           <ul class="services-bullet-sub-bullets">
             <li class="services-bullet-sub-bullet">The firm provides advice to potential venues to acquire water
               supply and facilitating the marketing of surplus supply.</li>
@@ -78,9 +88,13 @@
         </li>
 
         <li>
-          <h3 class="services-bullet-header">
-            Flood-MAR strategy and implementation
-          </h3>
+          <div class="services-header-container">
+            <h3 class="services-bullet-header">
+              Flood-MAR Strategy and Implementation
+            </h3>
+            <img class="services-show-more-arrow" src="/images/arrow-down.svg" />
+          </div>
+
           <ul class="services-bullet-sub-bullets">
             <li class="services-bullet-sub-bullet">Provides the most effective means to divert flood water for
               direct or in-lieu recharge</li>
@@ -88,9 +102,11 @@
         </li>
 
         <li>
-          <h3 class="services-bullet-header">
-            Policy and stakeholder negotiation
-          </h3>
+          <div class="services-header-container">
+            <h3 class="services-bullet-header">
+              Policy and Stakeholder Negotiation </h3>
+            <img class="services-show-more-arrow" src="/images/arrow-down.svg" />
+          </div>
           <ul class="services-bullet-sub-bullets">
             <li class="services-bullet-sub-bullet">Develop policies based on available water supply, local
               demand, and State and Federal restrictions.</li>
@@ -98,9 +114,13 @@
         </li>
 
         <li>
-          <h3 class="services-bullet-header">
-            Water infrastructure design and construction
-          </h3>
+          <div class="services-header-container">
+            <h3 class="services-bullet-header">
+              Water Infrastructure Design and Construction
+            </h3>
+            <img class="services-show-more-arrow" src="/images/arrow-down.svg" />
+          </div>
+
           <ul class="services-bullet-sub-bullets">
             <li class="services-bullet-sub-bullet">Provides expert advice on alternatives for surface and
               groundwater storage as well as conveyance infrastructure.</li>
@@ -146,7 +166,7 @@
 
   <footer>
     <p><strong>Address:</strong> 3458 Cordova Avenue, Merced, CA 95348</p>
-    <p>&copy; 2025 Valley Water Solutions. All rights reserved.</p>
+    <p>&copy; 2025-<span id="operating-years">2026</span> Valley Water Solutions. All rights reserved.</p>
   </footer>
 
   <script>
@@ -159,6 +179,25 @@
         });
       }
 
+      const servicesHeaderContainers = document.querySelectorAll(".services-header-container");
+
+      servicesHeaderContainers.forEach(container => {
+        container.addEventListener('click', () => {
+          const parentLi = container.closest('li'); // Finds the nearest parent list item
+          parentLi.classList.toggle('active');
+
+          // OPTIONAL: If you want only ONE dropdown open at a time (Accordion style), 
+          // uncomment the code below:
+          // servicesHeaderContainers.forEach(otherContainer => {
+          //   const otherLi = otherContainer.parentElement;
+          //   if (otherLi !== parentLi) {
+          //     otherLi.classList.remove('active');
+          //   }
+          // });
+
+        });
+      });
+
       const fadeEls = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -169,6 +208,9 @@
       }, { threshold: 0.1 });
 
       fadeEls.forEach(el => observer.observe(el));
+
+      document.getElementById("operating-years").innerHTML = new Date().getFullYear();
+
     });
   </script>
 </body>
