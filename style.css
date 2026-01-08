@@ -212,8 +212,14 @@ footer {
   margin-top: 4rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.contact-form .form-control,
+.contact-form .form-control textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.75rem;
@@ -221,7 +227,7 @@ footer {
   border-radius: 5px;
 }
 
-.contact-form button {
+.contact-form .form-button {
   background: #0e7490;
   color: white;
   border: none;
